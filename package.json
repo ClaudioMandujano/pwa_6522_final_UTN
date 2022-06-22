@@ -7,7 +7,9 @@
     "build": "npm run build-client",
     "start": "npm run start-server",
     "build-client": "npm run build --prefix=client",
-    "build-server": "npm start --prefix=server"
+    "build-server": "npm start --prefix=server",
+    "dev-server": "env-cmd -f server.env npm run dev --prefix=server",
+    "dev-client": "env-cmd -f client.env npm run start --prefix=client"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,8 @@
     "url": "https://github.com/ClaudioMandujano/pwa_6522_final_UTN/issues"
   },
   "homepage": "https://github.com/ClaudioMandujano/pwa_6522_final_UTN#readme",
-  "dependencies": {
-    
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.16"
   }
 }
