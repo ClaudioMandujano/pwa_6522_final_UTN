@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-   "build":"npm run build-client",
-   "start":"npm run start-server",
-   "build-client":"npm run build --prefix=client",
-   "build-server":"npm start --prefix=server"
+    "build": "npm run build-client",
+    "start": "npm run start-server",
+    "build-client": "npm run build --prefix=client",
+    "build-server": "npm start --prefix=server"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/ClaudioMandujano/pwa_6522_final_UTN/issues"
   },
-  "homepage": "https://github.com/ClaudioMandujano/pwa_6522_final_UTN#readme"
+  "homepage": "https://github.com/ClaudioMandujano/pwa_6522_final_UTN#readme",
+  "dependencies": {
+    
+  }
 }
