@@ -1,15 +1,15 @@
-const { connection, MYSQL, MONGO } = require("../config/database");
+const { connection, SQL, MONGO } = require("../config/database");
 
 let userModel;
 
 switch (connection) {
 
-    case MYSQL:
+    case SQL:
         userModel = require("./sql/userModel"); break;
     case MONGO:
         userModel = require("./mongo/userModel"); break;
     default:
-        throw `Must be specified DB_CONNECTION and only can be ${MYSQL} or ${MONGO}`;
+        throw `Must be specified DB_CONNECTION and only can be ${SQL} or ${MONGO}`;
 }
 
 module.exports = {

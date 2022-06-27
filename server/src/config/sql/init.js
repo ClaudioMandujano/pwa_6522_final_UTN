@@ -4,7 +4,7 @@ require("../../models");
 const initConnection = async () => {
     try {
         await sequelize.authenticate();
-        console.log('Connection with mysql has been established successfully.');
+        console.log('Connection with sql has been established successfully.');
         await sequelize.sync();
         console.log("All models were synchronized successfully.");
 

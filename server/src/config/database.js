@@ -1,9 +1,9 @@
 module.exports = {
     connection: process.env.DB_CONNECTION,
-    MYSQL: 'mysql',
+    SQL: 'sql',
     MONGO: 'mongodb',
-    mysql: {
-        uri: process.env.DB_URI
+    sql: {
+        uri: process.env.DB_URI.includes("postgres") ? process.env.DATABASE_URL : process.env.DB_URI
     },
     mongo: {
         uri: process.env.DB_URI

@@ -23,11 +23,7 @@ export default function App() {
   })
 
   const { isDarkMode } = globalState;
-
-  const value = {
-    globalState,
-    setGlobalState
-  }
+  
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
   // const [isDarkMode, setIsDarkMode] = useState(true);
 
@@ -38,10 +34,14 @@ export default function App() {
   });
 
   return (
-    <StoreContext.Provider value={value}>
+    <StoreContext.Provider value={{
+      globalState,
+      setGlobalState
+    }}>
+      {/* <AuthorizationContext.Provider value={{isLoggedIn}}> */}
       <ThemeProvider theme={theme}>
         <BrowserRouter>
-          <Toaster position="bottom-right" reverseOrder={false} />
+          <Toaster position="top-center" reverseOrder={false} />
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -57,6 +57,7 @@ export default function App() {
           </Layout>
         </BrowserRouter>
       </ThemeProvider>
+      {/* </AuthorizationContext.Provider> */}
     </StoreContext.Provider >
   );
 }
