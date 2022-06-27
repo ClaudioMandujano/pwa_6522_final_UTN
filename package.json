@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build-client",
+    "build": "npm run install-all && npm run build-client",
     "start": "npm run start-server",
     "build-client": "npm run build --prefix=client",
     "build-server": "npm start --prefix=server",
     "dev-server": "env-cmd -f server.env npm run dev --prefix=server",
-    "dev-client": "env-cmd -f client.env npm run start --prefix=client"
+    "dev-client": "env-cmd -f client.env npm run start --prefix=client",
+    "install-all": "npm run install-client && npm run install-server",
+    "install-client": "cd client && npm install",
+    "install-server": "cd server && npm install"
   },
   "repository": {
     "type": "git",
